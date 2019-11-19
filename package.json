@@ -6,19 +6,31 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "develop": "env-cmd .env gatsby develop",
+    "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "dependencies": {
-    "gatsby": "^2.17.11",
-    "react": "^16.11.0",
-    "react-dom": "^16.11.0"
+    "@contentful/rich-text-react-renderer": "^13.4.0",
+    "gatsby": "^2.3.3",
+    "gatsby-plugin-react-helmet": "^3.0.12",
+    "gatsby-plugin-sass": "^2.0.11",
+    "gatsby-plugin-sharp": "^2.0.32",
+    "gatsby-remark-images": "^3.0.10",
+    "gatsby-remark-relative-images": "^0.2.2",
+    "gatsby-source-contentful": "^2.1.61",
+    "gatsby-source-filesystem": "^2.0.28",
+    "gatsby-transformer-remark": "^2.3.8",
+    "node-sass": "^4.11.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.0"
   },
   "devDependencies": {
-    "prettier": "^1.19.1"
+    "env-cmd": "^8.0.2",
+    "prettier": "^1.16.4"
   },
   "repository": {
     "type": "git",
