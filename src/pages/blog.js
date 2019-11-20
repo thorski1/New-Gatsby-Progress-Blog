@@ -23,7 +23,7 @@ const BlogPage = () => {
   return (
     <Layout>
       <Head pageTitle="Blog" />
-      <h1>Blog</h1>
+      <h1 className={blogStyles.header}>Blog</h1>
       <ol className={blogStyles.posts}>
         {edges.map(post => {
           const { title, publishedDate, slug } = post.node
