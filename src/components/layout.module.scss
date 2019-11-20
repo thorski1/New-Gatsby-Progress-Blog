@@ -1,7 +1,7 @@
 .container {
 	font-family: Arial, Helvetica, sans-serif;
 	margin: 0 auto;
-	max-width: 750px;
+	max-width: 90vw;
 	padding: 1rem;
 	display: flex;
 	flex-direction: column;
@@ -10,4 +10,8 @@
 
 .content {
 	flex-grow: 1;
+}
+
+.page {
+	padding: 0 3rem;
 }

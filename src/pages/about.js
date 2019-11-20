@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import Head from "../components/head"
@@ -49,9 +48,6 @@ const AboutPage = () => {
         things and I take great pleasure in the act. If hired, my value as an
         employee would be limitless.
       </p>
-      <h1>
-        <Link to="/contact">Contact Me!</Link>
-      </h1>
     </Layout>
   )
 }
