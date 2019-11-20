@@ -13,7 +13,7 @@ const BlogPage = () => {
           node {
             title
             slug
-            image {
+            thumbnail {
               file {
                 url
               }
@@ -31,13 +31,21 @@ const BlogPage = () => {
       <h1 className={blogStyles.header}>Blog</h1>
       <ol className={blogStyles.posts}>
         {edges.map(post => {
-          const { title, publishedDate, slug, image } = post.node
+          const { title, publishedDate, slug, thumbnail } = post.node
           return (
             <li className={blogStyles.post}>
               <Link to={`/blog/${slug}`}>
-                <h2>{title}</h2>
-                <p>{publishedDate}</p>
-                <img alt={title} src={image.file.url} />
+                <div className={blogStyles.postContainer}>
+                  <img
+                    alt={title}
+                    src={thumbnail.file.url}
+                    className={blogStyles.thumbnailImg}
+                  />
+                  <div className={blogStyles.postContent}>
+                    <h2>{title}</h2>
+                    <p>{publishedDate}</p>
+                  </div>
+                </div>
               </Link>
             </li>
           )
