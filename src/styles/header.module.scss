@@ -24,6 +24,7 @@
 
 .title {
   color: #eeeeee;
+  text-shadow: 2px 2px 4px #000000;
   letter-spacing: 0.2rem;
   font-size: 2.9rem;
   text-decoration: none;
@@ -37,6 +38,7 @@
 
 .nav-item {
   color: #eee;
+  text-shadow: 2px 2px 4px #000000;
   font-size: 1.2rem;
   font-weight: bold;
   margin-right: 1.3rem;
@@ -49,4 +51,5 @@
 
 .active-nav-item {
   color: #333333;
+  text-shadow: none;
 }
