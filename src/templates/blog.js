@@ -23,7 +23,7 @@ const Blog = props => {
       "embedded-asset-block": node => {
         const alt = node.data.target.fields.title["en-US"]
         const url = node.data.target.fields.file["en-US"].url
-        return <img style={{width: "50vw", height: "50vh"}} alt={alt} src={url} />
+        return <img style={{width: "80vw", height: "60vh"}} alt={alt} src={url} />
       },
     },
   }
@@ -34,7 +34,9 @@ const Blog = props => {
       <Head pageTitle={title} />
       <h1>{title}</h1>
       <p>{publishedDate}</p>
+     
       {documentToReactComponents(json, options)}
+    
     </Layout>
   )
 }
