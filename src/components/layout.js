@@ -8,7 +8,7 @@ const Layout = props => {
     <div className={layoutStyles.container}>
       <div className={layoutStyles.content}>
         <Header />
-        <div className={layoutStyles.page}>{props.children}</div>
+        {props.children}
       </div>
       <Footer />
     </div>
