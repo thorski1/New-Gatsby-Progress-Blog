@@ -15,14 +15,12 @@ const ContactPage = () => {
          childImageSharp {
            fixed(
              width: 400
-             duotone: { highlight: "#52a1f5", shadow: "#111111" }
            ) {
              ...GatsbyImageSharpFixed
            }
            fluid(
              maxWidth: 200
              maxHeight: 200
-             duotone: { highlight: "#52a1f5", shadow: "#111111" }
            ) {
              ...GatsbyImageSharpFluid
            }

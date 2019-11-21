@@ -14,15 +14,13 @@ const IndexPage = () => {
         id
         childImageSharp {
           fixed(
-            width: 400
-            duotone: { highlight: "#52a1f5", shadow: "#111111" }
+            width: 400      
           ) {
             ...GatsbyImageSharpFixed
           }
           fluid(
             maxWidth: 200
             maxHeight: 200
-            duotone: { highlight: "#52a1f5", shadow: "#111111" }
           ) {
             ...GatsbyImageSharpFluid
           }
@@ -34,7 +32,7 @@ const IndexPage = () => {
     <Layout>
       <Head pageTitle="Home" />
       <div className={indexStyles.container}>
-        <h1 className={indexStyles.header}>Documenting my learning journey</h1>
+        <h1 className={indexStyles.header}>Documenting my Learning Journey</h1>
         <Img
           className={indexStyles.img}
           fixed={data.image.childImageSharp.fixed}
