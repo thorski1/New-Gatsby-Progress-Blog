@@ -5,6 +5,8 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import Layout from "../components/layout"
 import Head from "../components/head"
 
+import blogTemplateStyles from '../styles/blogTemplate.module.scss'
+
 export const query = graphql`
   query($slug: String!) {
     contentfulBlogPost(slug: { eq: $slug }) {
@@ -24,7 +26,7 @@ const Blog = props => {
         const alt = node.data.target.fields.title["en-US"]
         const url = node.data.target.fields.file["en-US"].url
         return (
-          <img style={{ width: "80vw", height: "60vh" }} alt={alt} src={url} />
+          <img className={blogTemplateStyles.img} alt={alt} src={url} />
         )
       },
     },
@@ -34,10 +36,13 @@ const Blog = props => {
   return (
     <Layout>
       <Head pageTitle={title} />
-      <h1>{title}</h1>
-      <p>{publishedDate}</p>
-
-      {documentToReactComponents(json, options)}
+      <div className={blogTemplateStyles.container}>
+        <div className={blogTemplateStyles.headerContainer}>
+          <h1 className={blogTemplateStyles.title}>{title}</h1>
+          <p className={blogTemplateStyles.date}>{publishedDate}</p>
+        </div>
+        <div>{documentToReactComponents(json, options)}</div>
+      </div>
     </Layout>
   )
 }
