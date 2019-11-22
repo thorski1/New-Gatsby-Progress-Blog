@@ -1,18 +1,21 @@
 import React from "react"
+import "typeface-roboto"
 import Header from "./header"
 import Footer from "./footer"
-import layoutStyles from "../styles/layout.module.scss"
 
-const Layout = props => {
-	return (
-    <div className={layoutStyles.container}>
-      <div className={layoutStyles.content}>
-        <Header />
-        {props.children}
-      </div>
+import CssBaseline from "@material-ui/core/CssBaseline"
+import Container from "@material-ui/core/Container"
+
+
+export default function Layout(props) {
+  return (
+    <React.Fragment>
+      <CssBaseline />
+      <Header />
+
+      <Container maxWidth="sm">{props.children}</Container>
+      
       <Footer />
-    </div>
+    </React.Fragment>
   )
 }
-
-export default Layout

@@ -1,11 +1,11 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
-
+import { Paper, Typography, CssBaseline } from "@material-ui/core"
 import Layout from "../components/layout"
 import Head from "../components/head"
 
-import blogTemplateStyles from '../styles/blogTemplate.module.scss'
+import { useStyles } from "../styles/useStyles"
 
 export const query = graphql`
   query($slug: String!) {
@@ -20,14 +20,13 @@ export const query = graphql`
 `
 
 const Blog = props => {
+  const classes = useStyles()
   const options = {
     renderNode: {
       "embedded-asset-block": node => {
         const alt = node.data.target.fields.title["en-US"]
         const url = node.data.target.fields.file["en-US"].url
-        return (
-          <img className={blogTemplateStyles.img} alt={alt} src={url} />
-        )
+        return <img className={classes.img} alt={alt} src={url} />
       },
     },
   }
@@ -36,12 +35,27 @@ const Blog = props => {
   return (
     <Layout>
       <Head pageTitle={title} />
-      <div className={blogTemplateStyles.container}>
-        <div className={blogTemplateStyles.headerContainer}>
-          <h1 className={blogTemplateStyles.title}>{title}</h1>
-          <p className={blogTemplateStyles.date}>{publishedDate}</p>
-        </div>
-        <div>{documentToReactComponents(json, options)}</div>
+      <CssBaseline />
+      <div className={classes.flex}>
+        <Paper elevation="15" className={classes.container}>
+          <Paper className={classes.titleOuter} elevation="15">
+            <Paper elevation="15" className={classes.root}>
+              <Typography className={classes.root}>
+                <Typography variant="h3" component="h3">
+                  {title}
+                </Typography>
+              </Typography>
+            </Paper>
+            <Paper className={classes.paper} elevation="15">
+              <Typography variant="p" component="p">
+                {publishedDate}
+              </Typography>
+            </Paper>
+          </Paper>
+          <Paper className={classes.paper} elevation="15">
+            {documentToReactComponents(json, options)}
+          </Paper>
+        </Paper>
       </div>
     </Layout>
   )
