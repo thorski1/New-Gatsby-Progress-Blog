@@ -23,7 +23,7 @@ const AboutPage = () => {
               </Typography>
             </Paper>
           </Paper>
-          <Paper className={classes.paper} elevation="15">
+          <Paper className={classes.postPaper} elevation="15">
             <Paper elevation="15" className={classes.paper}>
               <Typography className={classes.paper} variant="h5" component="h5">
                 About 6 months ago, I came to the realization that, in my

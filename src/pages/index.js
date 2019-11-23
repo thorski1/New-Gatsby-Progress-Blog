@@ -6,7 +6,7 @@ import Typography from "@material-ui/core/Typography"
 
 import Layout from "../components/layout"
 import Head from "../components/head"
-import {useStyles} from '../styles/useStyles'
+import { useStyles } from "../styles/useStyles"
 
 export default function IndexPage() {
   const classes = useStyles()
@@ -44,19 +44,17 @@ export default function IndexPage() {
               alt="Sam and Kaija"
             />
           </Paper>
-          <Paper className={classes.paper} elevation="15">
-            <Paper elevation="15" className={classes.paper}>
-              <Typography className={classes.paper} variant="h5" component="h5">
-                Every day, since July 16th, 2019, I've written a blog entry
-                documenting my progress in learning about web development.
-                Officially, I started studying on May 26th, 2019 and haven't
-                missed a day of putting in at least 3 hours of learning, and
-                often a lot more than that. It's been quite the adventure, and I
-                hope this blog helps other aspiring developers learn from my
-                mistakes and successes to help them achieve their goals in the
-                most efficient manner!
-              </Typography>
-            </Paper>
+          <Paper className={classes.postPaper} elevation="15">
+            <Typography className={classes.paper} variant="h5" component="h5">
+              Every day, since July 16th, 2019, I've written a blog entry
+              documenting my progress in learning about web development.
+              Officially, I started studying on May 26th, 2019 and haven't
+              missed a day of putting in at least 3 hours of learning, and often
+              a lot more than that. It's been quite the adventure, and I hope
+              this blog helps other aspiring developers learn from my mistakes
+              and successes to help them achieve their goals in the most
+              efficient manner!
+            </Typography>
           </Paper>
         </Paper>
       </div>
