@@ -78,11 +78,13 @@ const ContactPage = () => {
               </Paper>
             </Paper>
           </Paper>
-          <img
-            className={classes.contactImg}
-            src={data.imageSharp.childImageSharp.original.src}
-            alt="Sam and Kaija"
-          />
+          <Paper elevation="15" className={classes.paper}>
+            <img
+              className={classes.contactImg}
+              src={data.imageSharp.childImageSharp.original.src}
+              alt="Sam and Kaija"
+            />
+          </Paper>
         </Paper>
       </div>
     </Layout>

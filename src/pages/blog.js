@@ -49,7 +49,7 @@ const BlogPage = () => {
               return (
                 
                   <Link key={slug} style={{textDecoration: "none"}} to={`/blog/${slug}`}>
-                    <Paper className={classes.paper} elevation="15">
+                    <Paper className={classes.postPaper} elevation="15">
                       <Paper className={classes.paper} elevation="15">
                         <img
                           className={classes.img}

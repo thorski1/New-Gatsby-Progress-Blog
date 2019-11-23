@@ -52,7 +52,7 @@ const Blog = props => {
               </Typography>
             </Paper>
           </Paper>
-          <Paper className={classes.paper} elevation="15">
+          <Paper className={classes.blogPaper} elevation="15">
             {documentToReactComponents(json, options)}
           </Paper>
         </Paper>

@@ -37,7 +37,7 @@ export const useStyles = makeStyles(theme => ({
              "0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.7)",
          },
          contactImg: {
-           width: "50%",
+           width: "90%",
            borderRadius: "8px",
            boxShadow:
              "0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.7)",
@@ -63,10 +63,29 @@ export const useStyles = makeStyles(theme => ({
            marginBottom: "1rem",
            display: "flex",
            flexDirection: "column",
-           
          },
          link: {
            color: "#3f51b5",
            textDecoration: "none",
+         },
+         blogPaper: {
+           display: "flex",
+           justifyContent: "center",
+           alignItems: "center",
+           width: "75vw",
+           padding: "1rem",
+           flexDirection: "column",
+           marginBottom: "1rem",
+           textAlign: "center",
+         },
+         postPaper: {
+           display: "flex",
+           justifyContent: "center",
+           alignItems: "center",
+           flexDirection: "column",
+           width: "60vw",
+           padding: "1rem",
+           marginBottom: "1rem",
+           textAlign: "center",
          },
        }))
