@@ -1,0 +1,266 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 90vw;
+  margin-top: 2rem;
+  padding: 2rem;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 60vw;
+  margin-top: 2rem;
+  padding: 2rem;
+}
+
+.homePageContentContainer {
+  display: flex;
+  align-items: flex-start;
+}
+
+.homePageTextContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.titleOuter {
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.img {
+  width: 70%;
+  margin-bottom: 20px;
+  box-shadow: 3px 15px 59px -23px rgba(0, 0, 0, 0.75);
+  border-radius: 4px;
+}
+
+.homePageImage {
+  width: 50%;
+  height: 50%;
+  box-shadow: 3px 15px 59px -23px rgba(0, 0, 0, 0.75);
+  border-radius: 4px;
+  margin-left: 4rem;
+  margin-top: 5.75rem;
+}
+
+.blogPageImg {
+  width: 100%;
+  height: 80%;
+  border-radius: 4px;
+  box-shadow: 3px 15px 59px -23px rgba(0, 0, 0, 0.75);
+  margin-bottom: 10px;
+}
+
+.innerBlogImages {
+  width: 100%;
+  height: 300px;
+}
+
+.contactContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 80vw;
+  padding: 6rem;
+}
+
+.contactInfoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.contactInfoItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #3f51b5;
+  text-decoration: none;
+}
+
+.paper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.orderedList {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contactInfo {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.link {
+  color: #3f51b5;
+  text-decoration: none;
+}
+
+.blogPaper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75vw;
+  padding: 1rem;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.postPaper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 40vw;
+  height: 400px;
+  color: black;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.headerContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.blogEntryContainer {
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
+  padding: 5rem;
+}
+
+.aboutText {
+  width: 100%;
+  margin-bottom: 4rem;
+}
+
+.headerBar {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 8vw;
+}
+
+@media only screen and (max-width: 1100px) {
+  .container {
+    align-items: center;
+  }
+
+  .orderedList {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+  }
+
+  .homePageContentContainer {
+    flex-direction: column;
+  }
+
+  .homePageImage {
+    width: 60%;
+    height: 60%;
+    margin-left: 0;
+    margin-top: 2rem;
+  }
+
+  .postPaper {
+  width: 80vw;
+}
+}
+
+@media only screen and (max-width: 800px) {
+  .contactContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    padding-left: 10rem;
+  }
+
+  .contactInfoContainer {
+    margin-top: 4rem;
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .homePageImage {
+    width: 100%;
+    height: 100%;
+  }
+
+  .blogEntryContainer {
+  width: 100vw;
+  padding: 2rem;
+}
+.innerBlogImages {
+  height: 200px;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100vw;
+  margin-top: 2rem;
+  padding: 1rem;
+}
+}
+
+@media only screen and (max-width: 600px) {
+  .headerBar {
+    justify-content: center;
+    padding-right: 0;
+  }
+
+  .contactContainer {
+    padding-left: 1rem;
+  }
+
+  .blogPageImg {
+  width: 100%;
+  height: 180px;
+  border-radius: 4px;
+  box-shadow: 3px 15px 59px -23px rgba(0, 0, 0, 0.75);
+  margin-bottom: 10px;
+}
+
+.postPaper {
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+  width: 100vw;
+}
+
+}

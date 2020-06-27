@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
-import {Paper, Typography, CssBaseline} from "@material-ui/core"
-
+import { Typography, CssBaseline} from "@material-ui/core"
+import "../styles/styles.css"
 import Layout from "../components/layout"
 import Head from "../components/head"
 
@@ -32,55 +32,43 @@ const BlogPage = () => {
     <Layout>
       <Head pageTitle="Blog" />
       <CssBaseline />
-      <div className={classes.flex}>
-        <Paper elevation="15" className={classes.container}>
-          <Paper className={classes.titleOuter} elevation="15">
-            <Paper elevation="15" className={classes.root}>
-              <Typography className={classes.root}>
-                <Typography variant="h3" component="h3">
+      <div className="flex">
+        <div className="container">
+                <Typography style={{marginBottom: "3rem", marginLeft: "1rem"}} variant="h3" component="h3">
                   Progress Blog
                 </Typography>
-              </Typography>
-            </Paper>
-          </Paper>
-          <div className={classes.orderedList}>
+          <div className="orderedList">
             {edges.map(post => {
               const { title, publishedDate, slug, thumbnail } = post.node
               return (
                 
                   <Link key={slug} style={{textDecoration: "none"}} to={`/blog/${slug}`}>
-                    <Paper className={classes.postPaper} elevation="15">
-                      <Paper className={classes.paper} elevation="15">
+                    <div className="postPaper">
                         <img
-                          className={classes.img}
+                          className="blogPageImg"
                           src={thumbnail.file.url}
                           alt={title}
                         />
-                      </Paper>
-                      <Paper className={classes.paper} elevation="15">
                         <Typography
-                          className={classes.paper}
+                          className="paper"
                           variant="h4"
                           component="h4"
                         >
                           {title}
                         </Typography>
-                      </Paper>
-                      <Paper className={classes.paper} elevation="15">
                         <Typography
                           variant="p"
                           component="p"
                         >
                           {publishedDate}
                         </Typography>
-                      </Paper>
-                    </Paper>
+                    </div>
                   </Link>
                 
               )
             })}
           </div>
-        </Paper>
+        </div>
       </div>
     </Layout>
   )

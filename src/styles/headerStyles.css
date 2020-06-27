@@ -1,0 +1,11 @@
+.headerBar {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 8vw;
+}
+
+@media only screen and (max-width: 600px) {
+  .headerBar {
+    padding-right: 0;
+  }
+}
